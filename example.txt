@@ -1,0 +1,127 @@
+Error: failed to parse input: {
+  cat: "string" <- expected number
+  fishes: [
+    "1" <- expected { fish: { dog: number }}
+  ]
+}
+
+
+{
+  bird: "hello"
+  dog: (ignored)
+  cat: "two" <- expected number
+  lamps: {
+    cat: "yo",
+    dog: 3
+  },
+  fishes: [
+    "1" <- expected { fish: { dog: number }}
+  ]
+}
+
+
+
+
+
+
+
+node: result, error, ignored
+
+
+
+{
+  cat: {
+    Error,
+    result,
+    children:
+  },
+  fishes: {
+   children
+  }
+}
+
+
+Error: failed to parse input: {
+  cat: undefined <- expected number
+  fishes: [
+    "1" <- expected { fish: { dog: number }}
+  ]
+  fish: ""
+  dog: {
+    something: 2
+  } <- expected number
+}
+
+{
+  children: {
+
+  }
+}
+
+{
+  cat: "number"
+  fishes: [
+    "{ fish: { dog: number } }"
+  ],
+  dog: "number"
+}
+
+{
+  fishes: [
+    "1"
+  ]
+  dog: {
+    something: 2
+  }
+}
+
+
+
+node:
+  input
+  expectedType
+  children {
+    key: node
+  }
+
+errors:
+1. input.cat is not a number
+2. input.dogs is not an array
+3. input.fishes[0] is not an object
+    at repl:1:7
+    at ContextifyScript.Script.runInThisContext (vm.js:44:33)
+    at REPLServer.defaultEval (repl.js:239:29)
+    at bound (domain.js:301:14)
+    at REPLServer.runBound [as eval] (domain.js:314:12)
+    at REPLServer.onLine (repl.js:433:10)
+    at emitOne (events.js:120:20)
+    at REPLServer.emit (events.js:210:7)
+    at REPLServer.Interface._onLine (readline.js:278:10)
+    at REPLServer.Interface._line (readline.js:625:8)
+
+input: ["1"]
+type: "Array"
+ children: 0:
+   input: "1"
+   type: "{ cat: string } | string"
+     children:
+
+Error: failed to parse input: ["1"]
+errors:
+1. input[0] is not of type { cat: string } | string
+    at repl:1:7
+    at ContextifyScript.Script.runInThisContext (vm.js:44:33)
+    at REPLServer.defaultEval (repl.js:239:29)
+    at bound (domain.js:301:14)
+    at REPLServer.runBound [as eval] (domain.js:314:12)
+    at REPLServer.onLine (repl.js:433:10)
+    at emitOne (events.js:120:20)
+    at REPLServer.emit (events.js:210:7)
+    at REPLServer.Interface._onLine (readline.js:278:10)
+    at REPLServer.Interface._line (readline.js:625:8)
+
+  Error {
+    input,
+    expectedType
+    child errors (key: error),
+  }
